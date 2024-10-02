@@ -1,0 +1,8 @@
+x = int((input("What year is it? ")))
+if x> 0:
+    if  x % 4 == 0 and x % 100 != 0 or x % 400 ==0:
+        print (x ,"is a leap year.")
+    else:
+        print (x , "is not a leap year.")
+else: 
+    print (x , "is not a valid year.")
