@@ -1,0 +1,27 @@
+age = float(input("What is your age? "))
+bmi = float(input("What is your bmi? "))
+heal = input("Do you maintain healthy habits (yes/no)? ")
+
+if age <=39 and age >= 18:
+        if bmi < 25 and heal == "yes":
+            print ("Your health risk level is Low")
+        elif bmi < 25 and heal == "no" or bmi >= 25 and bmi < 30 and heal == "yes":
+            print ("Your health risk level is Medium")
+        elif bmi >= 25 and bmi < 30 and heal == "no" or bmi >= 30 and heal == "no":
+            print ("Your health risk level is High")
+
+if age <= 59 and age >= 40:
+     if bmi < 25 and heal == "yes":
+          print ("Your health risk level is Low")
+     elif bmi >= 25 and bmi < 30 or heal == "no":
+          print ("Your health risk level is Medium")
+     elif bmi >= 30 or heal == "no":
+          print ("Your health risk level is High")
+
+if age >= 60:
+     if bmi < 25 and heal == "yes":
+          print ("Your health risk level is Medium")
+     elif bmi >= 25 or heal == "no":
+          print ("Your health risk level is High")
+if age < 18:
+     print ("Your health risk level is not applicable for ages under 18")
