@@ -1,0 +1,45 @@
+def calculate_bmi(weight, height):
+    height2 = height * 0.3048
+    bmi = weight/(height2**2)
+    bmi = round(bmi, 2)
+    return bmi
+
+# Function to interpret BMI and return health status
+def interpret_bmi(bmi):
+    if bmi < 18.5:
+        status = ("Underweight")
+    elif 18.5 <= bmi < 25:
+        status =  ("Normal weight")
+    elif 24 <= bmi < 30:
+        status =  ("Overweight")
+    if bmi >= 30:
+        status = ("Obese")
+    return status
+
+# `True` if the value is zero or less, otherwise return `False`
+def is_zero_or_less(value):
+    if value <= 0:
+        return True
+    else:
+        return False
+
+
+# Main Program
+def main():
+    try:
+        weight = float(input("What is your weight in kg? "))
+        height = float(input("What is your height in feet? "))
+        # Prompt user for weight in kilograms
+        
+        # Calculate BMI
+        bmi = calculate_bmi(weight, height)
+        # Interpret and display BMI
+        status = interpret_bmi(bmi)
+        # Print the report
+        print(f"Your BMI is {bmi:.2f}, which is considered {status}.")
+    except ValueError:
+        print ("Invalid input. Please enter a valid number.")
+
+
+if __name__ == "__main__":
+    main()
